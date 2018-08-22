@@ -1,0 +1,21 @@
+{
+  "name": "itcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npm-run-all --parallel build-css:*",
+    "build-css:A": "node-sass --include-path scss/settings/brands/A scss/main.scss   public/A/main.css",
+    "build-css:B": "node-sass --include-path scss/settings/brands/B scss/main.scss   public/B/main.css",
+    "start": "yarn build-css && nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.3",
+    "npm-run-all": "^4.1.3"
+  }
+}
